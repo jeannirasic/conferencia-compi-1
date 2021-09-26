@@ -1,0 +1,13 @@
+version: '2.2'
+
+services:
+  frontend:
+    container_name: frontend
+    image: frontend
+    build: 
+      dockerfile: Dockerfile
+      context: ./ejemploCompilador
+    environment:
+      NODE_ENV: production
+    ports:
+      - 80:80
